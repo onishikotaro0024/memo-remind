@@ -38,3 +38,21 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+
+[handy with ease]
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const elements = document.querySelectorAll('.auto-close');
+
+    elements.forEach(element => {
+
+        element.innerHTML = element.innerHTML.replace(
+            /[（）・]/g,
+            '<span class="close-text">$&</span>'
+        );
+
+    });
+
+});
