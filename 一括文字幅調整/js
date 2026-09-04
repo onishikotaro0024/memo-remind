@@ -1,0 +1,13 @@
+document.addEventListener('DOMContentLoaded', () => {
+
+  // 指定した文字の字間を自動調整
+  document.querySelectorAll('.auto-close').forEach(element => {
+
+    element.innerHTML = element.innerHTML.replace(
+      /[（）・]/g,
+      '<span class="close-text">$&</span>'
+    );
+
+  });
+
+});

@@ -1,0 +1,4 @@
+.close-text {
+  font-feature-settings: "palt"; 
+  display: inline-block; 
+  margin-inline: -0.01em; }
