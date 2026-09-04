@@ -11,3 +11,30 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+
+
+[with ease]
+document.addEventListener('DOMContentLoaded', () => {
+
+  // .auto-closeを持つ要素を全部取得
+  const elements = document.querySelectorAll('.auto-close');
+
+  // 1つずつ処理
+  elements.forEach(element => {
+
+    // 現在のHTMLを取得
+    const original = element.innerHTML;
+
+    // （ ） ・ をspanで囲む
+    const replaced = original.replace(
+      /[（）・]/g,
+      '<span class="close-text">$&</span>'
+    );
+
+    // 加工したHTMLを戻す
+    element.innerHTML = replaced;
+
+  });
+
+});
